@@ -26,9 +26,7 @@ public class Main extends Application  {
                 System.out.println("Hello from lambda expression.");
                 System.out.println("Lines on lambda is very amazing");
             });
-            hello hello = ()->{
-                System.out.println("Hello from the interface implementation");
-            };
+
             StackPane layout = new StackPane();
             layout.getChildren().add(btn1);
             layout.setVisible(true);
