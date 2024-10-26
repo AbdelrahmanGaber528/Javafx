@@ -1,26 +1,26 @@
 package GUI;
-
-import java.util.Arrays;
 import java.util.Scanner;
-
-public class Solve {
-
+public class Solve{
+    static boolean isPrime(int num)
+    {
+        if(num<=1)
+            return false;
+        int i = 2;
+        while(i<=num/2){
+            if(num%i==0)
+                return false;
+            i++;
+        }
+        return true;
+    }
     public static void main(String[] args) {
-        try(Scanner input = new Scanner(System.in)){
+        Scanner input = new Scanner(System.in);
         int n = input.nextInt();
-        int k = input.nextInt();
-        int[] a = new int[n];
-            for (int i = 0; i < n; i++) {
-                a[i] = input.nextInt();
-            }
-            Arrays.sort(a);
-
-            long sum =0;
-
-            for (int i = 0; i < k; i++) {
-                sum+=a[i];
-            }
-            System.out.println(sum);
+        for (int i = 0; i < n; i++) {
+            if(isPrime(input.nextInt()))
+                System.out.println("YES");
+            else
+                System.out.println("NO");
         }
     }
 }
