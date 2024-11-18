@@ -22,7 +22,7 @@ public class Main extends Application  {
             mainWindow.setTitle("Title of Window");
             btn1 = new Button();
             btn1.setText("Click Me");
-            btn1.setOnAction(e -> {
+            btn1.setOnAction(e -> { //lambda expression
                 System.out.println("Hello from lambda expression.");
                 System.out.println("Lines on lambda is very amazing");
             });
